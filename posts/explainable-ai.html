@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- INSERT: Post 2 title (also update <h1> below) -->
-  <title>Why Your Model Has to Show Its Work — Fourth &amp; AI</title>
-  <meta name="description" content="Popularizing scholarly research on explainable AI in American football.">
+  <title>The Napkin Model: How Three Variables caught the NFL's best model — Fourth &amp; AI</title>
+  <meta name="description" content="How a transparent three-variable physics model matched the NFL's black-box pass-completion models — and why explainability is what matters on the sideline.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,16 +43,12 @@
 
   <main class="site-main" id="main">
     <article class="container container--read article">
-      <!-- INSERT: down-&-distance kicker / section label -->
       <p class="kicker">1st &amp; 10 · The Film Room</p>
-      <!-- INSERT: Post 2 title -->
-      <h1 class="headline">Why Your Model Has to Show Its Work</h1>
-      <!-- INSERT: Post 2 dek -->
-      <p class="dek">A prediction a coach can't interrogate is a prediction a coach won't use.</p>
+      <h1 class="headline">The Napkin Model: How Three Variables caught the NFL's best model</h1>
+      <p class="dek">How much accuracy do you really have to give up for a model that can explain itself? Turns out — barely any.</p>
       <p class="byline">
         <b>By Hreinson Vanover</b> ·
-        <!-- INSERT: which scholarly article this popularizes -->
-        Popularizing [Scholarly Article 2] · 4 min read
+        Popularizing Augustine, Redding &amp; Le Moan, The American Statistician · 3 min read
       </p>
 
       <div class="share">
@@ -66,44 +61,47 @@
 
       <div class="prose">
         <aside class="stat-card stat-card--float" aria-label="Key statistic">
-          <div class="stat-card__tag">Next Gen Stat</div>
-          <!-- INSERT: headline stat -->
-          <div class="stat-card__num">[stat]</div>
-          <div class="stat-card__label">[what the number measures]</div>
+          <div class="stat-card__tag">From the study</div>
+          <div class="stat-card__num">≈72%</div>
+          <div class="stat-card__label">Accuracy of the transparent 3-variable physics model — within a couple points of the NFL's black-box models</div>
         </aside>
 
-        <!-- INSERT: Post 2 body (~500 words). Keep inline links to the source
-             where research claims are made — use the <a> styling shown. -->
-        <p>A model can be right and still be useless. If it tells a coordinator to
-        expect a blitz but can't say <em>why</em>, the coordinator is left trusting a
-        black box on fourth down — and
-        <a href="#INSERT-source-url">most coaches won't</a>.</p>
+        <p>You've seen the number flash on your TV screen. Third-and-long, Mahomes drops back, a graphic pops up: Completion Probability: 38%. The play continues and the pass drops incomplete. Somewhere in the stadium, a satisfied data scientist is nodding his head.</p>
 
-        <p>This research takes the prediction problem and adds a harder requirement:
-        the system has to explain its reasoning in terms a football mind already uses
-        — alignment, leverage, tendency — fast enough to act on.</p>
+        <p>Most of the time that seemingly accurate number comes from a neural network, a machine learning model that can process and recognize complex data in a similar manner to the human brain. The predictions these models make are often so polished that the NFL bakes them into their Next Gen Stats. These models are powerful, but also black-boxes. The researchers who created them can't even completely tell you why the probability was 38%. The model knows. It just can't tell you why.</p>
+
+        <p>The future of NFL analytics lies in bridging the gap between models that can predict well and tell you why the prediction was made. Current state of the art models also happen to be the most opaque. A prediction with no reasoning to back it up is much harder to apply on the sideline. A new paper from Anton Augustine, Gabe Redding, and Steven Le Moan, <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2025.2541085" target="_blank" rel="noopener">published in The American Statistician</a>, asks the logical follow-up. How much accuracy do you really have to give up to get a model that can explain itself? Turns out, the answer is barely any.</p>
+
+        <p>Here's how it worked. The team trained multiple different pass-completion models on 2018 NFL player-tracking data that spanned over 13,000 plays using only information that would be available before the pass was made. Variables like receiver positions, velocities, and accelerations, and the ball's launch speed were included. The group then queued up the current industry models: logistic regression, random forest, SVM, and neural networks. Their model, which, given the state of modern AI/ML would almost look embarrassing, was a physics-based prediction model built using exactly 3 variables. Not hundreds of variables or dozens of layers, just a receiver's max speed, his max acceleration, and how hard the ball was thrown. The kind of model you could jot down on a napkin during dinner, or more importantly simple enough for a coordinator to balance during gametime. They then put their money where their mouth was, and pressure tested the model against the standard. The results were surprising.</p>
+
+        <p>The team ran the comparison. Their transparent, 3-variable, physics model landed at roughly 72% accuracy. The models the NFL currently uses for their graphics? They sit within a couple percentage points. The whole point of the paper rests on this finding. It turns out that the accuracy-explainability tradeoff is real but also marginal. You barely lose any correctness to be able to actually understand what your model is doing.</p>
+
+        <p>“...provide actionable insights into play dynamics, player performance, and training strategies,” <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2025.2541085" target="_blank" rel="noopener">the researchers write</a>.</p>
+
+        <p>“...a small explainable feature set does not necessarily come at the cost of accuracy.”</p>
 
         <div class="coach-note">
           <p class="coach-note__label">Coach's Note</p>
-          <!-- INSERT: the article's core insight, in one sentence -->
-          <p class="coach-note__quote">"Trust isn't earned by being right. It's earned by showing your work."</p>
+          <p class="coach-note__quote">"An opaque model gives you an answer. Transparency gives you a reason."</p>
         </div>
 
-        <p>The payoff is adoption: an explainable call is one a staff can argue with,
-        override, or believe. The authors walk through how they got there in
-        <a href="#INSERT-source-url">the original paper</a>.</p>
+        <p>An opaque model gives you an answer. Transparency gives you a reason. A reason is something that a coach can latch onto and fix. When it comes to gametime this is crucial, the model that can be understood is the one coaches can actually use. Coaches can test it, argue with it, and drive their coaching from it. They can see that wide receivers with higher max acceleration off the line have a higher chance of making a catch and swinging his completion probability by several points. They can run speed drills or ball speed drills during practice. The best part, you can decide whether or not to trust it.</p>
 
-        <p><!-- INSERT: remaining body paragraphs --></p>
+        <p>Doing any of this with a neural network is near impossible. The most accurate model a team has is useless if nobody can explain or understand the output before the ball is snapped. Black-box accuracy is nice for media and executive leaders. Explainability is what really matters on the sideline.</p>
+
+        <p>The authors are clear that real-time deployment is still up to future research and that their model only uses pre-pass information. This still presents a good starting point. But the bridge from explainable to explainable in real-time is the leap that all of us are watching for.</p>
+
+        <p>Until then, the data speaks for itself. The NFL's state-of-the-art models just got tied by a model you could write on a napkin. And it seems to be the more useful model anyway.</p>
       </div>
 
       <!-- Game Notes — Sources -->
       <section class="sources" aria-label="Sources">
         <p class="sources__label">Game Notes — Sources</p>
         <p class="sources__item">
-          <!-- INSERT: full citation for scholarly article 2 + link -->
-          [Author et&nbsp;al.] "[Title of Scholarly Article 2]."
-          <cite>[Journal / Venue]</cite>, [Year]. —
-          <a href="#INSERT-source-url">Read the original article →</a>
+          <!-- optional: exact paper title -->
+          Augustine, A., Redding, G., &amp; Le Moan, S.
+          <cite>The American Statistician</cite> (2025). doi:10.1080/00031305.2025.2541085 —
+          <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2025.2541085" target="_blank" rel="noopener">Read the original article →</a>
         </p>
       </section>
 
