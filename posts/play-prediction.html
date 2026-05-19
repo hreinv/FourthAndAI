@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- INSERT: Post 1 title (also update <h1> below) -->
-  <title>Can a Machine Call the Play Before the Snap? — Fourth &amp; AI</title>
-  <meta name="description" content="Popularizing scholarly research on real-time play prediction in American football.">
+  <title>The Sideline AI Football Wants Already Exists. It's Just Playing Soccer. — Fourth &amp; AI</title>
+  <meta name="description" content="A live, explainable AI that recommends tactics mid-game already exists in soccer, basketball, and rugby — and what it means for football.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,16 +43,12 @@
 
   <main class="site-main" id="main">
     <article class="container container--read article">
-      <!-- INSERT: down-&-distance kicker / section label -->
       <p class="kicker">4th &amp; AI · The Snap Count</p>
-      <!-- INSERT: Post 1 title -->
-      <h1 class="headline">Can a Machine Call the Play Before the Snap?</h1>
-      <!-- INSERT: Post 1 dek -->
-      <p class="dek">Inside the research teaching algorithms to read an offense as fast as a coordinator can.</p>
+      <h1 class="headline">The Sideline AI Football Wants Already Exists. It's Just Playing Soccer.</h1>
+      <p class="dek">The live, explainable sideline tool every NFL coordinator wants? It already exists — for soccer.</p>
       <p class="byline">
         <b>By Hreinson Vanover</b> ·
-        <!-- INSERT: which scholarly article this popularizes -->
-        Popularizing [Scholarly Article 1] · 4 min read
+        Popularizing Meng, Isleem &amp; El Hindi, Neurocomputing · 4 min read
       </p>
 
       <div class="share">
@@ -66,44 +61,49 @@
 
       <div class="prose">
         <aside class="stat-card stat-card--float" aria-label="Key statistic">
-          <div class="stat-card__tag">Next Gen Stat</div>
-          <!-- INSERT: headline stat -->
-          <div class="stat-card__num">73.2%</div>
-          <div class="stat-card__label">Pre-snap play-type accuracy reported by the model</div>
+          <div class="stat-card__tag">Real deployment</div>
+          <div class="stat-card__num">−47.3%</div>
+          <div class="stat-card__label">Goals conceded on counterattacks, over 10 matches with a Premier League youth academy</div>
         </aside>
 
-        <!-- INSERT: Post 1 body (~500 words). Keep inline links to the source
-             where research claims are made — use the <a> styling shown. -->
-        <p>Every snap starts with a question the defense has milliseconds to answer:
-        run or pass? A team of researchers wondered whether a model could answer it
-        too — not after the game in a film session, but
-        <a href="#INSERT-source-url">in the seconds before the ball is snapped</a>.</p>
+        <p>What's the analytics tool that every NFL coordinator would be salivating at the mouth to use? It's not another points dashboard. Not another win probability graphic that updates after the play. They want something live. Something that can work alongside them and make recommendations as the game progresses while still being explainable. Something fast enough to make adjustments before the next snap. That tool has just been built. Except it's playing soccer.</p>
 
-        <p>They trained on years of player-tracking data: where everyone lined up,
-        who went in motion, the down and distance. The interesting result wasn't just
-        that it worked — it's <em>how fast</em> it had to work to be useful at all.</p>
+        <p>This type of system would be exceptionally useful for the NFL. However, this doesn't quite exist yet for American football. But, for soccer, basketball, and rugby this tool has begun to make waves. New research from Xinyu Meng, Haytham F. Isleem, and Khalid El Hindi in <a href="https://www.sciencedirect.com/science/article/abs/pii/S092523122502942X" target="_blank" rel="noopener">Neurocomputing</a>, lay out a framework, coined hierarchical deep reinforcement learning (H-DRL), that delivers live, strategic recommendations in dynamic team sport environments and explains the reasoning as it goes.</p>
+
+        <p>The problem the researchers worked to solve is the same one every football analytics team runs into. Team sports are so dynamic and chaotic in ways that most models cannot typically handle. Game states are shifting every second. As many as 22 players are interacting in seemingly random ways. No one on the playing field has full information. Current models either cannot handle the complexity of the data or black-box models, like discussed in <a href="explainable-ai.html">The Napkin Model</a>, produce outputs that have no reasoning to back them up.</p>
+
+        <p>The team's H-DRL framework handles the complexity like a piece of cake. The framework stacks the problem into distinct layers. At the base, a graph neural network, tracks the smaller interactions, think player and ball interactions milliseconds apart. The next layer above, a transformer, handles watching for longer developing tactical patterns: formations, possession sequences, and opponent tendencies. On the top of everything lies an inverse reinforcement learning module that works to proactively predict what the other team is trying to do. The whole setup takes seconds to run. The setup allows on the fly strategic adjustment during play calling along with the reasoning to back it up.</p>
+
+        <p>The group tested their work on player-tracking datasets from basketball, soccer, and rugby. Like much of the other research in this field, they ran it against the current state-of-the-art models in each sport respectively.</p>
+
+        <p>The figures were surprising to say the least. Tactical decision accuracy jumped 34.7%. The time between data going in and a recommendation coming out went down 28.3%. Computational cost dropped 41.2%. Scoring efficiency on the basketball test rose 26.3%. The system killed its competition in all aspects. The framework was faster, more accurate, and cheaper to run.</p>
+
+        <p>The coolest part came when the researchers used their work for a real-life application in soccer. In tests with a Premier League youth academy, the system was able to notice an anomaly none of the coaches could see. When the first line of the press got broken, the midfielders' positioning would open gaps during the transition. The system gave a recommendation to move the midfielders into a half-back position whenever the press got broken. Goals conceded on counterattacks dropped a whopping 47.3% over the subsequent 10 matches.</p>
+
+        <p>“Most importantly, the system's explainable AI system also helped coaches understand why this adjustment worked, leading to further tactical adjustments,” <a href="https://www.sciencedirect.com/science/article/abs/pii/S092523122502942X" target="_blank" rel="noopener">The researchers write</a>.</p>
+
+        <p>“...but, more importantly, the capacity to discover new tactical innovations that enhance human understanding and push the boundaries of strategic thinking in sport.”</p>
 
         <div class="coach-note">
           <p class="coach-note__label">Coach's Note</p>
-          <!-- INSERT: the article's core insight, in one sentence -->
-          <p class="coach-note__quote">"A prediction that arrives after the snap is just a very confident replay."</p>
+          <p class="coach-note__quote">"The tool coaches have been asking for already works in other sports. It's no longer imaginary."</p>
         </div>
 
-        <p>That constraint — real time or nothing — is what separates this work from
-        the analytics you already see on broadcasts. The full methodology is laid out
-        in <a href="#INSERT-source-url">the original paper</a>.</p>
+        <p>You may say, “But why does this matter for football? This is about soccer.” To that I say, that is exactly why it matters. This framework provides a proof of concept. Real-time, explainable AI exists for complex team sports. It's been used before and has shown massive upside. Coaches who were originally skeptics of the technology ended up adopting the system rather quickly. In the Premier League case study, engagement rose from 23% to 94% in just under six months.</p>
 
-        <p><!-- INSERT: remaining body paragraphs --></p>
+        <p>The important part is that this framework has not been adapted to American football just yet. Football is fundamentally different in many ways from soccer or basketball. Discrete plays, huddles, eleven positions with different roles. This means the adaptation will not be easy, but now we know that it is not impossible.</p>
+
+        <p>Live, explainable AI isn't coming to the sidelines just yet. The tool coaches have been asking for already works in other sports. It's no longer imaginary. It's only a matter of time before we see a tool like this adopted for American football. The gap between “it exists in soccer” and “it exists in football” is the kind of gap that closes quickly.</p>
       </div>
 
       <!-- Game Notes — Sources -->
       <section class="sources" aria-label="Sources">
         <p class="sources__label">Game Notes — Sources</p>
         <p class="sources__item">
-          <!-- INSERT: full citation for scholarly article 1 + link -->
-          [Author et&nbsp;al.] "[Title of Scholarly Article 1]."
-          <cite>[Journal / Venue]</cite>, [Year]. —
-          <a href="#INSERT-source-url">Read the original article →</a>
+          <!-- optional: exact paper title -->
+          Meng, X., Isleem, H. F., &amp; El Hindi, K.
+          <cite>Neurocomputing</cite> (2025). —
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S092523122502942X" target="_blank" rel="noopener">Read the original article →</a>
         </p>
       </section>
 
